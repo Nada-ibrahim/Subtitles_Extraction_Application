@@ -1,4 +1,4 @@
-function []=haarFilter(img)
+function [candidateImg]=haarFilter(img)
 % img=im2bw(img,0.5);
 % n = 2;
 % %[ca,ch,cv,cd]=dwt2(img,'haar');%wavelet decomposition in to approximation image ,horiz,vertical and diagonals
@@ -60,17 +60,17 @@ candidateImg = preprocessImg(getTxtEdgesFromCandidate(img, candidate));
 s = sum(candidateImg);
 m = median(s);
 d = mean(s);
-plot(s);
-figure;
-subplot(3,1,1);
-imshow(img);
+% plot(s);
+% figure;
+% subplot(3,1,1);
+% imshow(img);
 %xlabel('original');
 % subplot(4,1,2);
 % imshow(Vnew);
 %xlabel('haar');
-subplot(3,1,2);
-imshow(imghaar);
- subplot(3,1,3);
- imshow(candidateImg);
+% subplot(3,1,2);
+% imshow(imghaar);
+%  subplot(3,1,3);
+%  imshow(candidateImg);
 
 end
