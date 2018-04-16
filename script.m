@@ -1,4 +1,4 @@
-img='Data set\4.jpg';
+img='Data set\8.jpg';
 img=readImg(img);
 %figure;
 %imshow(img);

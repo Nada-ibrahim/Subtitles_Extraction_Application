@@ -13,8 +13,8 @@ pointsY(index+3,1) = j-1;
 pointsX(index+4,1) = i;
 pointsY(index+4,1) = j+1;
 index = index + 4;
-x = 0;
-while(index ~= 0 )
+z = 0;
+while(index ~= 0 && z < 200 )
     x = pointsX(index,1);
     y = pointsY(index,1);
     index = index - 1;
@@ -29,7 +29,7 @@ while(index ~= 0 )
         pointsX(index+4,1) = x;
         pointsY(index+4,1) = y+1;
         index = index + 4;
-        x = x+1;
+        z = z+1;
     end
 end
 
