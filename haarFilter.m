@@ -32,17 +32,17 @@ imghaar((Hnew>0)&(Vnew>0)&(Dnew>0)) = 255;
 imghaar = imresize(imghaar, [size(img,1) size(img,2)], 'nearest');
 candidateImg = preprocessImg(getTxtEdgesFromCandidate(img, candidate));
 s = sum(candidateImg);
-plot(s);
-figure;
-subplot(3,1,1);
-imshow(img);
+%plot(s);
+%figure;
+%subplot(3,1,1);
+%imshow(img);
 %xlabel('original');
 % subplot(4,1,2);
 % imshow(Vnew);
 %xlabel('haar');
-subplot(3,1,2);
-imshow(imghaar);
- subplot(3,1,3);
- imshow(candidateImg);
+%subplot(3,1,2);
+%imshow(imghaar);
+ %subplot(3,1,3);
+ %imshow(candidateImg);
 
 end
