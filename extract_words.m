@@ -5,10 +5,11 @@ function [ words ] = extract_words( lines )
         linehight = size(line, 1);
         wordgap = ceil(floor(linehight * 0.2)/3);
         if (wordgap == 1)
-            wordgap = 3;
+            wordgap = 2;
         end
-        se=strel('disk',wordgap);
-        img_2 = imdilate(line,se);
+        se = strel('disk', wordgap  +1);
+        img_2 = imdilate(line, se);
+        %imshow(img_2);
         [lab,num] = bwlabel(img_2);
         for i=1:num
             [r,c] = find(lab == i);

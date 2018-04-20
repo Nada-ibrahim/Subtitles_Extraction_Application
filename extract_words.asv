@@ -1,30 +1,23 @@
 function [ words ] = extract_words( lines )
-    words  =[];
+   words  = {};
    for i = 1 : length(lines)
         line = cell2mat(lines(i));
-       % se=strel('disk',5);
-       % img_2=imdilate(line,se);
         linehight = size(line, 1);
         wordgap = ceil(floor(linehight * 0.2)/3);
         if (wordgap == 1)
             wordgap = 3;
         end
-        se=strel('disk',wordgap);
-       
-        img_2=imdilate(line,se);
-        figure(1);
+        se = strel('disk', wordgap);
+        img_2 = imdilate(line, se);
         imshow(img_2);
-        [lab,num]=bwlabel(img_2);
-        figure;
+        [lab,num] = bwlabel(img_2);
         for i=1:num
-            [r,c]=find(lab==i);
-            img_3=line(min(r):max(r),min(c):max(c),:);
-              subplot(3,4,i)
-              imshow(img_3);
-              drawnow
+            [r,c] = find(lab == i);
+            word = line(min(r):max(r),min(c):max(c),:);
+            words = [words word];
+%             subplot(3,4,i)
+%             imshow(word);
         end
-
-   end
-
+   end 
 end
 

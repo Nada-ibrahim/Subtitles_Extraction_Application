@@ -1,8 +1,9 @@
 
 function [ letters ] = extract_trans( trans )
-% Extracting translation from img
+% Extracting words from img
     lines = extract_lines(trans);
+       % [L Ne]=bwlabel(trans);
     words = extract_words(lines);
-    letters = extract_letters(words);
+    letters = extract_letters(words)
 end
 
