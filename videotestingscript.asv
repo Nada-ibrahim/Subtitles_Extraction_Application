@@ -1,0 +1,11 @@
+v = VideoReader('Data set/testingvideo.mp4');
+framerate = v.FrameRate;
+framenum = 0;
+while hasFrame(v)
+    framenum = framenum + 1;
+    video = readFrame(v);
+    if (framenum > (floor(framerate * 2)));
+        imshow(video);
+    end
+end
+x = 5;

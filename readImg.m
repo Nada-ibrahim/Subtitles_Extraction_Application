@@ -1,6 +1,6 @@
-function [ img ] = readImg( path )
+function [ img ] = readImg( img )
 
-img = imread(path);
+
 img = rgb2gray(img);
 img = imresize(img, [NaN 640]);
 sz = size(img);

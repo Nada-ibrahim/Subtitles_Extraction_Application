@@ -1,9 +1,10 @@
 
-function [ letters ] = extract_trans( trans )
-% Extracting words from img
-    lines = extract_lines(trans);
-       % [L Ne]=bwlabel(trans);
-    words = extract_words(lines);
-    letters = extract_letters(words)
+function [ letters, bool_trans ] = extract_trans( trans )
+% Extracting translation from img
+    [lines , bool_trans] = extract_lines(trans); % bool_trans check if translation exsits
+    if (bool_trans == 0)
+        words = extract_words(lines);
+        letters = extract_letters(words);
+    end
 end
 

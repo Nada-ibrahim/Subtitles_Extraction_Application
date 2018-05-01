@@ -1,7 +1,8 @@
 
 for i =1 : 1
     
-img=['Data set\' int2str(7) '.jpg'];
+path=['Data set\' int2str(11) '.png'];
+img = imread(path);
 img=readImg(img);
 %figure;
 %imshow(img);
