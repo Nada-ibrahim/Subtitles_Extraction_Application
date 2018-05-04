@@ -23,9 +23,9 @@ function [ lines ] = extract_lines( trans )
             lines = [lines crop_line(thisLine)];
         end
     end
-    for i = 1: length(lines)
-       subplot( 3,1, i);
-       imshow(cell2mat(lines(i)))
-    end
+    %for i = 1: length(lines)
+      % subplot( 3,1, i);
+     %  imshow(cell2mat(lines(i)))
+    %end
 end
 
