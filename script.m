@@ -7,7 +7,8 @@ img=readImg(img);
 %imshow(img);
 
 trans = haarFilter(img);
-extract_trans(trans);
+  letters = extract_trans(trans);
+  linkedLitters = linkeLetter( letters );
 end
 
 
