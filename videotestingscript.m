@@ -1,4 +1,4 @@
-function videotestingscript( videoPath )
+function videotestingscript(videoPath )
 v = VideoReader(videoPath);
 %v = VideoReader('Data set/video1.mp4');
 framerate = v.FrameRate;

@@ -1,6 +1,6 @@
 function [ candidateImg ] = boundingBox( haarImg, org )
 haarImg = haarImg/255;
-w  =110;
+w  =100;
 h = 26;
 boxesValues = zeros(size(org,1), size(org,2));
 for i = h/2:ceil(h/4):size(haarImg,1)-h/2
