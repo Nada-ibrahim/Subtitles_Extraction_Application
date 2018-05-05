@@ -78,7 +78,7 @@ function chooseFile_pushbutton_Callback(hObject, eventdata, handles)
 % hObject    handle to chooseFile_pushbutton (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-[filename, pathname] = uigetfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';},'Choose Image','C:\Users\Aya\Desktop\2nd term 3rd year\Image processing\imageProject\ImgProject\Subtitles_Extraction_Application\Data set');
+[filename, pathname] = uigetfile({'*.jpg;*.tif;*.png;*.gif','All Image Files';},'Choose Image','D:\Matlab\Image Project Git');
 filePath = fullfile(pathname, filename);
 handles.edit1.String = filePath;
 
