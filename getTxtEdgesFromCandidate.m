@@ -16,11 +16,11 @@ ymin = min(y);
 ymax = max(y);
 orgEdges = orgEdges(xmin:xmax, ymin:ymax);
 candidateImg = candidateImg(xmin:xmax, ymin:ymax);
-
+imshow(org(xmin:xmax, ymin:ymax));
 %flood until reaching all text areas in the original and retutrn them in
 %white and BG in black
 candidateEdgesCropped = getFromOrg(candidateImg, 255*orgEdges);
-
+candidateEdgesCropped = boundingBox(candidateEdgesCropped, candidateEdgesCropped);
 
 
 end

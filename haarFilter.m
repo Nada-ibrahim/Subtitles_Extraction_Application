@@ -27,9 +27,7 @@ imghaar = imresize(imghaar, [size(img,1) size(img,2)], 'nearest');
 candidate = boundingBox(imghaar, img);
 
 %applty segmentation and flooding on text area alone
-imghaar=zeros(size(Hnew,1),size(Hnew,2));
-imghaar((Hnew>0)&(Vnew>0)&(Dnew>0)) = 255;
-imghaar = imresize(imghaar, [size(img,1) size(img,2)], 'nearest');
+
 candidateImg = preprocessImg(getTxtEdgesFromCandidate(img, candidate));
 s = sum(candidateImg);
 %plot(s);
