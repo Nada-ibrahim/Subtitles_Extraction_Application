@@ -4,7 +4,7 @@ org = imsharpen(imsharpen(org));
 org = imadjust(uint8(org), [0.5 0.8], [0 1]);
 org = double(org);
 
-imshow(uint8(org));
+%imshow(uint8(org));
 goodImg = haar;
 goodImg2 = goodImg;
 %      imshow(goodImg);
