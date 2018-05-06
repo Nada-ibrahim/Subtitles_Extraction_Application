@@ -7,12 +7,17 @@ while hasFrame(v)
     framenum = framenum + 1;
     frame = readFrame(v);
 
-    if (framenum > (floor(framerate * 2)));
+    if (framenum > (floor(framerate * 2)))
+        fileID = fopen('subtitleText.txt', 'a');
+
         %imshow(frame);
-        process_img(frame);
+        str=process_img(frame);
+        str = [str '\n'];
+        fprintf(fileID,str);
         framenum= 0;
+        fclose(fileID);
+
     end
 end
-
 end
 
